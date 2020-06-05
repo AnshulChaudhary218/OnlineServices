@@ -1,0 +1,82 @@
+Download:
+Xampp
+Composer 
+VS code
+
+
+1:to create project
+C:/xampp/htdocs:  composer create-project laravel/laravel workshop
+
+2: 
+edit .env file for database
+
+3:to deploy at 127.0.0.1:8000
+php artisan serve
+
+Files:
+Model -- Datbases/migration
+View-- resources/views
+Routes -- routes/web.php
+Controller--app/Http/Controller
+
+4: to create Auth
+composer require laravel/ui
+php artisan ui vue --auth
+
+
+5: create landing page
+in views file create app.blade.php
+
+6: 
+create route
+
+Route::get('/', function () {
+    return view('landingpage.app');
+});
+
+7: 
+Using @include() for modular development
+
+
+8: Use of routes:
+write hrefs in navbar.blade.php
+
+create views using @yield() and @section() and @extends()
+
+write routes for it 
+Route::get('/', function () {
+    return view('landingpage.app');
+});
+
+
+9: 
+Create models and migrations
+
+php artisan make:model services -m
+
+change in tables in migration
+
+10:
+migrate into database 
+php artisan migrate
+
+11:
+Create Controller
+
+php artisan make:controller ContactController
+
+12:
+create contact model
+
+php artisan make:model contact -m
+
+Edit fields in table
+
+migrate fields
+
+
+13: create route for form
+
+14: Write function in controller(submit function to insert in database)
+
+704
